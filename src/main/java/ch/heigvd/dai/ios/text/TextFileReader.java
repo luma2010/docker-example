@@ -15,8 +15,7 @@ public class TextFileReader implements Readable {
     try(InputStream is = new FileInputStream(filename);
         Reader reader = new InputStreamReader(is, StandardCharsets.UTF_8)){
       int a;
-      while((a = reader.read()) != 1){
-        System.out.print(a);
+      while((a = reader.read()) != -1){
       }
 
 

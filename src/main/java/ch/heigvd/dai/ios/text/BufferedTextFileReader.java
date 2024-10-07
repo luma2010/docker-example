@@ -17,8 +17,8 @@ public class BufferedTextFileReader implements Readable {
         Reader reader = new InputStreamReader(is, StandardCharsets.UTF_8);
         BufferedReader bis = new BufferedReader(reader)){
       int a;
-      while((a = bis.read()) != 1){
-        System.out.print(a);
+      while((a = bis.read()) != -1){
+
       }
 
 

@@ -16,8 +16,7 @@ public class BinaryFileReader implements Readable {
   public void read(String filename) {
     try(InputStream is = new FileInputStream(filename);){
       int a;
-      while((a = is.read()) != 1){
-        System.out.print(a);
+      while((a = is.read()) != -1){
       }
 
 

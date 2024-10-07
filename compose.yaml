@@ -1,0 +1,11 @@
+services:
+  writer:
+    image: ghcr.io/luma2010/java-ios-docker
+    command: ["--implementation=BUFFERED_BINARY", "/data/100-bytes.bin", "write", "--size=100"]
+    volumes:
+      - .:/data
+  reader:
+      image: ghcr.io/luma2010/java-ios-docker
+      command: ["--implementation=BUFFERED_BINARY", "/data/100-bytes.bin", "read"]
+      volumes:
+        - .:/data

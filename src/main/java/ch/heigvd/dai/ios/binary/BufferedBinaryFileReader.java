@@ -19,8 +19,7 @@ public class BufferedBinaryFileReader implements Readable {
     try(InputStream is = new FileInputStream(filename);
         InputStream bis = new BufferedInputStream(is)){
       int a;
-      while((a = bis.read()) != 1){
-        System.out.print(a);
+      while((a = bis.read()) != -1){
       }
 
 
